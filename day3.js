@@ -92,4 +92,4 @@ let date=new Date();
 let new_date=new Date();
 
 let secondsEllapsed=Math.floor(new_date.getTime()/1000);
-console.log(secondsEllapsed);
+console.log(secondsEllapsed,end="");
