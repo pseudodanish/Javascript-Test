@@ -93,3 +93,78 @@ let new_date=new Date();
 
 let secondsEllapsed=Math.floor(new_date.getTime()/1000);
 console.log(secondsEllapsed,end="");
+
+
+// Exercise 2 ============================
+
+// 1)Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=area()>Click ME</button>
+</body>
+<script>
+    function area() {
+        let base = prompt("Enter base of triangle :");
+        let height = prompt("Enter height of triangle :");
+
+        let area = 0.5 * base * height;
+        document.write(area);
+    }
+</script>
+
+</html>
+
+//2)
+//  Calculate the slope, x-intercept and y-intercept of y = 2x-2
+let m=2;
+let c=-2;
+let x_intercept=-c/m;
+let y_intercept=(m*x_intercept)+c;
+
+console.log(`The Slope is ${m} whereas the x-intercept is ${x_intercept} while the y_intercept is ${y_intercept}`);
+
+// 3))// Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+let n=1000;
+let x=0;
+while(x<=0)
+    {
+        x--;
+        y=(x*x)+(6*x)+9;
+
+        if(y==0)
+            {
+                console.log(`At ${x} the value of y is 0`);
+                break;
+            }
+    }
+
+
+    
+
+// Exercise 3 ============================
+// 1)Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+// YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+
+let dat=new Date();
+let min=dat.getMinutes();
+let hrs=dat.getHours();
+if(min<10 || hrs<10)
+    {
+        if (min<10){
+            min="0"+min;
+        }
+        if (hrs<10){
+            hrs="0"+hrs;
+        }
+    }
+console.log(dat.getTime());
+console.log(`${dat.getDate()}/${dat.getMonth() + 1}/${dat.getFullYear()} ${hrs}:${min}`)
